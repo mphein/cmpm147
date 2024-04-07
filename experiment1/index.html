@@ -17,8 +17,6 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
-	<!-- Load p5.js library -->
-	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
 
 	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
     <script type="text/javascript" src="../js/site.js" DEFER></script>
@@ -27,35 +25,38 @@
 	<!-- Use me for a p5.js project -->
 	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
 </head>
-<body>
+<body style= "background-image: url('space.jpg'); background-size: cover;">
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 1 - Text Generators</h1>
 
-			<div class="minor-section">
-				<div id="canvas-container">
-					<!-- canvas will be added here -->
+			<div class="minor-section" id = "text-gen">
+				<div
+					id="box" >
 				</div>
-                <div class="fullscreen-box">
-                    <button id="fullscreen">Fullscreen</button>
-                </div>
+				<button id="clicker">
+					New Simulation
+				</button>
 			</div>
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>This project was made to gain experience with text generators. I thought it would be cool to experiment with how aliens might flirt and compliment each other. The intended audience experience is supposed to be humorous and lighthearted. I experimented by conjoining prefixes and suffixes to create names and planets. I also used chatGPT to help me brainstorm some of these prefixes and suffixes based on words we associated with aliens or outer space!</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>From the project's base code, I created new lists of fillers for the replacer function to choose from. I also created the base story involving a first date between two aliens. The main function is called in project.js
+					which then cretes a dictionary with key:value pairs. The values associated with each key is a list of words that can be substituted into a specific part of the story. The replacer function filters through the story and replaces words matching the slotPattern.
+					It then replaces that slot with a word associated with a key randomly chosen from the value list.
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>Overall seeing this makes me less scared of text generators and how to incorporate them. I felt that the generator I made had a decent amount of variety, and felt successful. Some difficulties were styling this experiment on the web page and coming up with unique words that and combinations that would make the story feel unique and fun.</p>
 			</div>
 
 		</section>

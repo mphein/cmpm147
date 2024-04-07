@@ -17,3 +17,39 @@ body {
     width: 100%;
     height: 600px;
 }
+
+.minor-section {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    border: thin solid black; 
+    padding: 1em; 
+    margin: 1em; 
+    box-shadow: 10px 10px 10px black;
+    background: lightgoldenrodyellow
+}
+
+h1 {
+    color: #ffe;
+}
+
+#box {
+    background: #ffe;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+#text-gen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: black;
+    color: #ffe;
+    border-radius: 25px;
+    width: 150px;
+    height: 25px;
+}
