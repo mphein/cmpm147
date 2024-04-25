@@ -56,11 +56,16 @@
 			<div class="minor-section">
 				<h2>Description</h2>
 				<p>In this experiment I learned how to procedurally generate dungeon terrain using a tilemap. Using this method I can hopefully learn what aspects of terrain I like and adjust the parameters accordingly. Using the text grid there is the option of live editing levels to further explore possibilities and make edits by hand. There is fog that passes through the dungeon across the screen and a light to illuminate the dark dungeon which follows the user's cursor. These both add a bit of life to the scene.</p>
+				<a href="https://thkaspar.itch.io/micro-tileset-overworld-dungeon">Micro Tilset by thkaspar</a>
+				<ul> Codes
+					<li> '_' = background tile
+					<li> '.' = floor tile
+			</ul>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>>I first generated a grid of floor tiles represented by '_'. In this same function I called generatePaths() and placeRooms(). We were instructed to create a rectangular room 
+				<p>I first generated a grid of floor tiles represented by '_'. In this same function I called generatePaths() and placeRooms(). We were instructed to create a rectangular room 
 					to begin with, but I found it much easier to first generate a random path throughout the terrain which can be shortened or elongated easily by manipulating the 
 					maxSteps value. These tiles will have their value in the grid changed to '.' which later became the dungeon floors in this example, but this can be edited to be any tile or group of tiles.
 					placeBlock is then called to randomly place a rectangular room somewhere along the path. I then fill in the grid either by 
