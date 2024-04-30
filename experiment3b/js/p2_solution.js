@@ -182,8 +182,8 @@ function drawGrid(grid) {
       for(let j = 0; j < grid[i].length; j++) {
         if (gridCheck(grid,i,j, 'g')) {
           placeTile(i, j, random(0,3) | 0, 1);
-          drawContext(grid, i, j, '_', 5, 1, waterLookup);
           drawContext(grid, i, j, 'w', 5, 1, waterLookup);
+          drawContext(grid, i, j, '_', 5, 1, waterLookup);
         }
       }
     }
@@ -219,6 +219,7 @@ function drawGrid(grid) {
           placeTile(i, j, random(0,3) | 0, 13);
           drawContext(grid, i, j, '_', 5, 13, waterLookup);
           drawContext(grid, i, j, 'w', 5, 13, waterLookup);
+          drawContext(grid, i, j, '.', 5, 13, waterLookup);
         }
       }
     }

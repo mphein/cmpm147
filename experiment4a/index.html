@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 4a - Rainbow Road</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/p2_base.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/p2_solution.js" DEFER></script>
+	<script src="./js/xxhash.min.js" defer></script>
+    <script src="./js/my_world.js" defer></script>
+    <script src="./js/engine.js" defer></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4a - Rainbow Road</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+					<!-- canvas will be added here -->
+					<div id="container"></div>
+					<div>
+						<button onclick="toggleSparkle()">Toggle Sparkle</button>
+					</div>
+					
+			</div>
+				<div class="fullscreen-box">
+						<button id="fullscreen">Fullscreen</button>
+				</div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<br>
+				<div>
+					<b>Infinity</b>
+					<p>I used infinity in my world to represent a never ending road inspired by Mario Kart's rainbow road map.</p>
+				</div>
+				<div>
+					<b>Variation in Space
+					</b>
+					<p>As you can see the road curves like a real life road winding back and forth endlessly. Different seeds will have varying shapes and colors.</p>
+				</div>
+				<div>
+					<b>Variation in Key</b>
+					<p>The key controls the pattern whether it is vertical, horizontal, or more random. It also controls the colors of the tiles, and what colors they will sparkle into.
+						As you can see there is a sparkle mode that randomizes the color values based on perlin noise, also when you click on a tile you spawn a Mario Kart item box.
+					</p>
+				</div>
+				<div>
+					<b>Signs of life</b>
+					<p>As you can see there is a sparkle mode that randomizes the color values based on perlin noise, also when you click on a tile you spawn a Mario Kart item box.
+					</p>
+				</div>
+				<img src="./rainbow road.png">
+				<a href="https://www.fumcr.com/MarioKart64RainbowRoadWallpaper_13[1].png">Image</a>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>Using the user's world key I was able to create a world seed from the string which would generate the same perlin noise and random values to preserve values for each key and seed. For rainbow road I was just getting started with generating this infinite landscape. I started by making a roadWidth which would draw a colored tile infinitely. From there I wrote a function to color in each tile using colors from the rainbow. Using perlin noise I was able to achieve different effects such as vertical road lines, horizontal road lines, and random shapes along the road. I also added a sparkle function which will further randomize the color of each tile between a set value which is able to distinguish that color.
+				I also was able to add an offset to the road center such that it appears to be curivng and turning at random points. For the massive landscapes I was able to zoom out by making the tile sizes smaller. I also added some random displacement on the tiles so they appear to be moving or shifting constantly in and out of place. I had the most fun making the interesting tiles (Experiment 4c) and I played around with using random values to shift the tile size which can be controlled by the user. This allows for massive landscapes with height and depth while also creating abstract tile art and patterns.
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I learned quite a bit from this assignment and grew in creativity along the way. I started with a concrete image and moved more to abstraction, using noise to help me and the user create abstract art. I definitely was very lost with what to do in the beginning, but I think starting with a concrete image definitely helps. I had a hard time with learning when to use perlin noise or random() function calls when coloring tiles. I am very happy with the result and I believe it does look like an infinite rainbow road, landscapes, atoms, and patterns.</p>
+			</div>
+
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+								<li><a href="../experiment4b/index.html">Experiment 4b</a></li>
+								<li><a href="../experiment4c/index.html">Experiment 4c</a></li>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
