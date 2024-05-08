@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 5 - Evolutionary Impressions</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+    <script src="./js/my_design.js" defer></script>
+    <script src="./js/sketch.js" defer></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 5 - Evolutionary Impressions</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+					<!-- canvas will be added here -->
+					<select id="dropper"></select>
+					<button id="restart">
+						restart
+					</button>
+					<p>
+						Mutation rate (<span id="rate"></span>%):<br /><input
+							id="slider"
+							type="range"
+							min="1"
+							max="100"
+							value="100"
+						/>
+					</p>
+					<p id="active"></p>
+					<p>Active score: <span id="activeScore"></span></p>
+					<p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+					<p id="best"></p>
+					<p>Best score: <span id="bestScore"></span></p>
+					<p id="memory" data-max-items="16"></p>
+					</div>
+			</div>
+				<div class="fullscreen-box">
+						<button id="fullscreen">Fullscreen</button>
+				</div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p></p>
+				I used a variety of images ranging from simple items, to landscapes. These are crafted over time using basic shapes which are mutated over time to resemble the image.
+				<br>
+					Images shown at bottom:
+					<br>
+					name: "Spinning top",
+					credit: "https://www.artofplay.com/cdn/shop/products/TungsteneTop.png?v=1636417098&width=1024"
+					<br>
+					
+					name: "Mountain",
+					credit: "Mountain by Michael Hein"
+					<br>
+					name: "Googly",
+					credit: "Googly eyes https://m.media-amazon.com/images/I/61IdJ9TPfKL._AC_UF894,1000_QL80_.jpg"
+					<br>
+					name: "Stars",
+					credit: "Starry Night, Michael Hein"
+					
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>
+					These images are reconstructed using simple shapes such as triangles, rectangles, and circles. The slider represents how much each shape will mutate in position, color, or size. Each inspiration has different design attributes which contribute to its starting shapes, colors, quantity and positions.
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I learned a lot about how the mutation function works, its inputs, and how to play around with the design parameters to customize each image impression. I tried manipulating a lot of the data values, such as color, position, and size to recreate each image in a unique way. </p>
+			</div>
+
+			<div class="minor-section">
+				<img src="./img/googly.jpg">
+				<img src="./img/mountain.jpg">
+				<img src="./img/stars.jpg">
+				<img src="./img/top.jpg">
+			</div>
+
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html" target="_blank" >Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
